@@ -1,5 +1,5 @@
 //
-//  SecondViewContollerViewController.swift
+//  ContollerViewController.swift
 //  multiPartChallenge1
 //
 //  Created by EthanBalink on 15/06/2023.
@@ -8,11 +8,12 @@
 import UIKit
 
 class SecondViewContollerViewController: UIViewController {
+    
+    var username:String = "Abraham"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let username = "Abraham"
-        self.title = "Welcome " + username
+        self.title = "Welcome " + username// needs to be found
         // Do any additional setup after loading the view.
     }
     

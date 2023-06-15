@@ -13,7 +13,6 @@
 		714BDE512A3AEEB00061766A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714BDE4F2A3AEEB00061766A /* Main.storyboard */; };
 		714BDE532A3AEEB20061766A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714BDE522A3AEEB20061766A /* Assets.xcassets */; };
 		714BDE562A3AEEB20061766A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714BDE542A3AEEB20061766A /* LaunchScreen.storyboard */; };
-		714BDE5E2A3AF2AD0061766A /* SecondViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714BDE5D2A3AF2AD0061766A /* SecondViewContoller.swift */; };
 		714BDE602A3AFE140061766A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714BDE5F2A3AFE140061766A /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +25,6 @@
 		714BDE522A3AEEB20061766A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		714BDE552A3AEEB20061766A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		714BDE572A3AEEB20061766A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		714BDE5D2A3AF2AD0061766A /* SecondViewContoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewContoller.swift; sourceTree = "<group>"; };
 		714BDE5F2A3AFE140061766A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -63,7 +61,6 @@
 				714BDE492A3AEEB00061766A /* AppDelegate.swift */,
 				714BDE4B2A3AEEB00061766A /* SceneDelegate.swift */,
 				714BDE4D2A3AEEB00061766A /* ViewController.swift */,
-				714BDE5D2A3AF2AD0061766A /* SecondViewContoller.swift */,
 				714BDE4F2A3AEEB00061766A /* Main.storyboard */,
 				714BDE522A3AEEB20061766A /* Assets.xcassets */,
 				714BDE542A3AEEB20061766A /* LaunchScreen.storyboard */,
@@ -146,7 +143,6 @@
 			files = (
 				714BDE4E2A3AEEB00061766A /* ViewController.swift in Sources */,
 				714BDE4A2A3AEEB00061766A /* AppDelegate.swift in Sources */,
-				714BDE5E2A3AF2AD0061766A /* SecondViewContoller.swift in Sources */,
 				714BDE602A3AFE140061766A /* ListViewController.swift in Sources */,
 				714BDE4C2A3AEEB00061766A /* SceneDelegate.swift in Sources */,
 			);

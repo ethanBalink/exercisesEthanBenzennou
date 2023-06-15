@@ -11,6 +11,11 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ListViewController {
+            vc.username = usernameInput?.text ?? ""
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -32,12 +37,12 @@ class ViewController: UIViewController {
         return false
     }
     
-    @IBAction func loginPressed(_ sender: Any) {
+    @IBAction func loginPressed(_ sender: UIButton) {
         //        print(usernameInput.text ?? "")
         //        print(passwordInput.text ?? "")
-        if  inputFieldsValid() {
-            performSegue(withIdentifier: "secondView", sender: nil)
-        }
+//        if  inputFieldsValid() {
+            performSegue(withIdentifier: "listview", sender: nil)
+       // }
     }
 }
 
