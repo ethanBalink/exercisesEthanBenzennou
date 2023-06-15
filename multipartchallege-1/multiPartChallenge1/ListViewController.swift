@@ -23,7 +23,7 @@ class ListViewController: UIViewController ,UITableViewDataSource ,UITableViewDe
     var username :String?
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "username"
+        self.title = username
        tableView.reloadData()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
 

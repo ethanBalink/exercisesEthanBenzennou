@@ -26,10 +26,18 @@ class ViewController: UIViewController {
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailPred.evaluate(with: email)
     }
+    func isValidPassword(_ password: String) -> Bool {
+        let passwordRegEx = "^[^\\s]+$"
+        
+        let passwordPred = NSPredicate(format:"SELF MATCHES %@", passwordRegEx)
+        return passwordPred.evaluate(with: password)
+    }
     
     func inputFieldsValid() -> Bool{
-        if (usernameInput.text != nil) && (passwordInput.text != nil) {
-            if isValidEmail(usernameInput.text!){
+        if (usernameInput.text != "") && (passwordInput.text != "") {
+            if isValidEmail(usernameInput.text!) &&
+                isValidPassword(passwordInput.text!) {
+                
                 return true
             }
             
@@ -38,11 +46,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {
-        //        print(usernameInput.text ?? "")
-        //        print(passwordInput.text ?? "")
-//        if  inputFieldsValid() {
+        if  inputFieldsValid() {
             performSegue(withIdentifier: "listview", sender: nil)
-       // }
+        }
     }
 }
 
