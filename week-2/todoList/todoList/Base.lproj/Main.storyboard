@@ -21,7 +21,7 @@
                                 <rect key="frame" x="-7" y="59" width="393" height="44"/>
                                 <items>
                                     <navigationItem title="To Do List" id="XWH-ME-YRZ">
-                                        <barButtonItem key="rightBarButtonItem" title="+" image="plus" catalog="system" id="FG8-z8-Ecx">
+                                        <barButtonItem key="leftBarButtonItem" title="+" image="plus" catalog="system" id="FG8-z8-Ecx">
                                             <connections>
                                                 <action selector="addItem:" destination="BYZ-38-t0r" id="bgA-7T-Sid"/>
                                             </connections>
@@ -42,13 +42,28 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionviewCell" id="5vx-gI-Ty0">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="collectionviewCell" id="5vx-gI-Ty0" customClass="CellCollectionViewCell" customModule="todoList" customModuleProvider="target">
                                         <rect key="frame" x="89.666666666666671" y="0.0" width="200" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="nFa-ov-D6f">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QL5-Mt-AXu">
+                                                    <rect key="frame" x="35" y="72" width="128" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="QL5-Mt-AXu" firstAttribute="centerY" secondItem="nFa-ov-D6f" secondAttribute="centerY" id="fvt-UE-3xp"/>
+                                                <constraint firstItem="QL5-Mt-AXu" firstAttribute="centerX" secondItem="nFa-ov-D6f" secondAttribute="centerX" id="uWg-zH-ogd"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="QL5-Mt-AXu" id="gPY-gc-XzC"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                                 <connections>
@@ -68,6 +83,9 @@
                             <constraint firstAttribute="bottom" secondItem="1sm-1a-5NR" secondAttribute="bottom" id="jzL-6W-p4V"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collView" destination="1sm-1a-5NR" id="ekp-EB-Aay"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

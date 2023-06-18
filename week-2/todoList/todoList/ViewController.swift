@@ -11,7 +11,13 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    let arr = ["hi","hello","hey","jo","jt", "ofldx"]
+    @IBOutlet weak var collView: UICollectionView!
+    var arr = ["hi","hello","hey","jo","jt", "ofldx"] {
+        didSet {
+            print(arr)
+            self.collView.reloadData()
+        }
+    }
     
     // row size return
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -19,8 +25,10 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
     }
     // cell showing
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionviewCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionviewCell", for: indexPath) as! CellCollectionViewCell
         cell.backgroundColor = UIColor.cyan
+        cell.label.text = arr[indexPath.item]
+        
         return cell
     }
     
@@ -37,18 +45,27 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
     // section header
     //
     // alert..
+    func isValidInput(_ input: String) -> Bool {
+        let inputRegEx = "^[^\\s]+$"
+        
+        let inputPred = NSPredicate(format: "SELF MATCHES %@", inputRegEx)
+        return inputPred.evaluate(with: input)
+    }
     
     @IBAction func addItem(_ sender: UIBarButtonItem) {
         // defines alert
-        var dialogMessage = UIAlertController(title: "Add Task", message: "Write the task you need to do", preferredStyle: .alert)
+        let dialogMessage = UIAlertController(title: "Add Task", message: "Write the task you need to do", preferredStyle: .alert)
         // adds input
         dialogMessage.addTextField(configurationHandler: { textField in})
         // defines button
         let ok = UIAlertAction(title: "Add", style: .default, handler: { (action) -> Void in
-            let userInput = dialogMessage.textFields?.first?.text ?? ""
-            print(userInput)})
-        
-        
+            if let userInput = dialogMessage.textFields?.first?.text {
+                print(userInput)
+                if self.isValidInput(userInput){
+                    self.arr.append(userInput)
+                }}
+            
+        })
         // adds button
         dialogMessage.addAction(ok)
         // adds alert to screen
