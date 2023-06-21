@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CustomView" customModule="todoList" customModuleProvider="target">
             <connections>
-                <outlet property="switchChanged" destination="6zh-Rw-P3n" id="iuB-lt-ufA"/>
+                <outlet property="switchStatus" destination="6zh-Rw-P3n" id="ymd-oK-KcI"/>
                 <outlet property="title" destination="4PL-Gn-dwm" id="nAH-m7-ZhV"/>
             </connections>
         </placeholder>

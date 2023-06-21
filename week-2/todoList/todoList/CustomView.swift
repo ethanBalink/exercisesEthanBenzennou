@@ -12,7 +12,7 @@ class CustomView: UIView {
     @IBAction func pressedX(_ sender: Any) {
         print(4444)
     }
-    @IBOutlet weak var switchChanged: UISwitch!
+    @IBOutlet weak var switchStatus: UISwitch!
     @IBOutlet weak var title: UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)

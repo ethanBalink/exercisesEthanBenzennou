@@ -49,7 +49,9 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
         return CGSize(width: newWidth / 2,
                       height: 100)
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        showCustomView(currentObj: todoArr[indexPath.item])
+    }
     // func when add item
     func addTodo(title:String) {
         let newTodo = NSManagedObject(entity: entity!, insertInto: context)
@@ -88,7 +90,6 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
             if let userInput = dialogMessage.textFields?.first?.text {
                 if self.isValidInput(userInput) {
                     self.addTodo(title: userInput)
-                    self.showCustomView()
                 }}
             
         })
@@ -98,11 +99,14 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
         self.present(dialogMessage, animated: true, completion: nil)
         
     }
-    func showCustomView() {
+    
+    func showCustomView(currentObj:NSManagedObject) {
         let alert = CustomView(frame: CGRect(x: 20.0, y: 100.0, width: 300.0, height: 250.0))
-        alert.title.text = "hekko"
+        let a = currentObj.value(forKey: "title") as? String
+        alert.title.text = a
         alert.layer.borderWidth = 5
         alert.layer.borderColor = UIColor.red.cgColor
+        alert.switchStatus.isOn = currentObj.value(forKey: "isDone") as? Bool ?? false
         self.view.addSubview(alert)
     }
     
