@@ -13,10 +13,10 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
     var entity: NSEntityDescription!
     var todoArr: [NSManagedObject] = [] {
         didSet {
-            // print(todoArr)
             self.collView.reloadData()
         }
     }
+    var alert: CustomView?
     override func viewDidLoad() {
         super.viewDidLoad()
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -50,7 +50,9 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
                       height: 100)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        index = indexPath.item
         showCustomView(currentObj: todoArr[indexPath.item])
+        
     }
     // func when add item
     func addTodo(title:String) {
@@ -70,7 +72,7 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
         let inputPred = NSPredicate(format: "SELF MATCHES %@", inputRegEx)
         return inputPred.evaluate(with: input)
     }
-    
+    // default data
     func getSavedData() {
         let request = NSFetchRequest<NSManagedObject>(entityName: "Todo")
         do {
@@ -99,15 +101,32 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
         self.present(dialogMessage, animated: true, completion: nil)
         
     }
-    
+    var index: Int?
     func showCustomView(currentObj:NSManagedObject) {
-        let alert = CustomView(frame: CGRect(x: 20.0, y: 100.0, width: 300.0, height: 250.0))
+        
+        alert = CustomView(frame: CGRect(x: 20.0, y: 100.0, width: 300.0, height: 250.0))
         let a = currentObj.value(forKey: "title") as? String
-        alert.title.text = a
-        alert.layer.borderWidth = 5
-        alert.layer.borderColor = UIColor.red.cgColor
-        alert.switchStatus.isOn = currentObj.value(forKey: "isDone") as? Bool ?? false
-        self.view.addSubview(alert)
+        alert?.title.text = a
+        alert?.layer.borderWidth = 5
+        alert?.layer.borderColor = UIColor.red.cgColor
+        alert?.switchStatus.isOn = currentObj.value(forKey: "isDone") as? Bool ?? false
+        
+        alert?.xbutton.addTarget(self, action: #selector(removeView), for: .touchUpInside)
+        
+        self.view.addSubview(alert!)
+    }
+    
+    @objc  func removeView(){
+        print(alert?.switchStatus.isOn ?? true)
+        //1
+        let currentObject = todoArr[index!]
+        if let statusSwitch = alert?.switchStatus.isOn {
+            currentObject.setValue(statusSwitch, forKey: "isDone")
+        } else {
+            print("error")
+        }
+        getSavedData()
+        alert?.removeFromSuperview()
     }
     
     

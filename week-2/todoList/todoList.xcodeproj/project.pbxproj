@@ -72,8 +72,8 @@
 				714AA4B42A3EE911007D8928 /* Main.storyboard */,
 				714AA4B72A3EE914007D8928 /* Assets.xcassets */,
 				714AA4B92A3EE914007D8928 /* LaunchScreen.storyboard */,
-				714AA4BC2A3EE914007D8928 /* Info.plist */,
 				714AA4C42A3F50DB007D8928 /* CellCollectionViewCell.swift */,
+				714AA4BC2A3EE914007D8928 /* Info.plist */,
 				714DDF0B2A41A6B900D486B0 /* Model.xcdatamodeld */,
 			);
 			path = todoList;
