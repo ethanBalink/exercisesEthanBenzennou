@@ -15,6 +15,8 @@
 		714AA4BB2A3EE914007D8928 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714AA4B92A3EE914007D8928 /* LaunchScreen.storyboard */; };
 		714AA4C52A3F50DB007D8928 /* CellCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714AA4C42A3F50DB007D8928 /* CellCollectionViewCell.swift */; };
 		714DDF0D2A41A6B900D486B0 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 714DDF0B2A41A6B900D486B0 /* Model.xcdatamodeld */; };
+		71F06C042A431B5E001141F4 /* customView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71F06C032A431B5E001141F4 /* customView.xib */; };
+		71F06C062A431B74001141F4 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71F06C052A431B74001141F4 /* CustomView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		714AA4BC2A3EE914007D8928 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		714AA4C42A3F50DB007D8928 /* CellCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCollectionViewCell.swift; sourceTree = "<group>"; };
 		714DDF0C2A41A6B900D486B0 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		71F06C032A431B5E001141F4 /* customView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = customView.xib; sourceTree = "<group>"; };
+		71F06C052A431B74001141F4 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				714AA4AE2A3EE911007D8928 /* AppDelegate.swift */,
 				714AA4B02A3EE911007D8928 /* SceneDelegate.swift */,
 				714AA4B22A3EE911007D8928 /* ViewController.swift */,
+				71F06C032A431B5E001141F4 /* customView.xib */,
+				71F06C052A431B74001141F4 /* CustomView.swift */,
 				714AA4B42A3EE911007D8928 /* Main.storyboard */,
 				714AA4B72A3EE914007D8928 /* Assets.xcassets */,
 				714AA4B92A3EE914007D8928 /* LaunchScreen.storyboard */,
@@ -132,6 +138,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				714AA4BB2A3EE914007D8928 /* LaunchScreen.storyboard in Resources */,
+				71F06C042A431B5E001141F4 /* customView.xib in Resources */,
 				714AA4B82A3EE914007D8928 /* Assets.xcassets in Resources */,
 				714AA4B62A3EE911007D8928 /* Main.storyboard in Resources */,
 			);
@@ -147,6 +154,7 @@
 				714AA4B32A3EE911007D8928 /* ViewController.swift in Sources */,
 				714AA4AF2A3EE911007D8928 /* AppDelegate.swift in Sources */,
 				714AA4C52A3F50DB007D8928 /* CellCollectionViewCell.swift in Sources */,
+				71F06C062A431B74001141F4 /* CustomView.swift in Sources */,
 				714AA4B12A3EE911007D8928 /* SceneDelegate.swift in Sources */,
 				714DDF0D2A41A6B900D486B0 /* Model.xcdatamodeld in Sources */,
 			);

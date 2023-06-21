@@ -88,6 +88,7 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
             if let userInput = dialogMessage.textFields?.first?.text {
                 if self.isValidInput(userInput) {
                     self.addTodo(title: userInput)
+                    self.showCustomView()
                 }}
             
         })
@@ -96,6 +97,13 @@ class ViewController: UIViewController ,UICollectionViewDataSource, UICollection
         // adds alert to screen
         self.present(dialogMessage, animated: true, completion: nil)
         
+    }
+    func showCustomView() {
+        let alert = CustomView(frame: CGRect(x: 20.0, y: 100.0, width: 300.0, height: 250.0))
+        alert.title.text = "hekko"
+        alert.layer.borderWidth = 5
+        alert.layer.borderColor = UIColor.red.cgColor
+        self.view.addSubview(alert)
     }
     
     
