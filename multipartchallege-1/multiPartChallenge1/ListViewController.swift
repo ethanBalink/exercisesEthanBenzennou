@@ -8,14 +8,26 @@
 import UIKit
 
 class ListViewController: UIViewController ,UITableViewDataSource ,UITableViewDelegate{
-    let productArr = ["water","food", "chitas", "rambam", "macbook", "mouse", "charger"]
+    var productArr : [Product] = []
+    var categoriesArr :[String] = []
+    func getCategories() {
+        for product in productArr {
+            if !categoriesArr.contains(product.category) {
+                categoriesArr.append(product.category)
+            }
+        }
+    }
+
+   
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return productArr.count
+        
+        return categoriesArr.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "- \(productArr[indexPath.row]) "
+        let currentObj = categoriesArr[indexPath.row]
+        cell.textLabel?.text = "\(currentObj)"
         return cell
     }
     
@@ -26,11 +38,10 @@ class ListViewController: UIViewController ,UITableViewDataSource ,UITableViewDe
         self.title = username
        tableView.reloadData()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-
+        getCategories()
        tableView.dataSource = self
     }
-    
-
+   
     /*
     // MARK: - Navigation
 

@@ -14,6 +14,7 @@
 		714BDE532A3AEEB20061766A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714BDE522A3AEEB20061766A /* Assets.xcassets */; };
 		714BDE562A3AEEB20061766A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714BDE542A3AEEB20061766A /* LaunchScreen.storyboard */; };
 		714BDE602A3AFE140061766A /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714BDE5F2A3AFE140061766A /* ListViewController.swift */; };
+		717370F42A446E8700285BA0 /* productStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 717370F32A446E8700285BA0 /* productStruct.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		714BDE552A3AEEB20061766A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		714BDE572A3AEEB20061766A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		714BDE5F2A3AFE140061766A /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		717370F32A446E8700285BA0 /* productStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productStruct.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				714BDE4B2A3AEEB00061766A /* SceneDelegate.swift */,
 				714BDE4D2A3AEEB00061766A /* ViewController.swift */,
 				714BDE4F2A3AEEB00061766A /* Main.storyboard */,
+				717370F32A446E8700285BA0 /* productStruct.swift */,
 				714BDE522A3AEEB20061766A /* Assets.xcassets */,
 				714BDE542A3AEEB20061766A /* LaunchScreen.storyboard */,
 				714BDE572A3AEEB20061766A /* Info.plist */,
@@ -144,6 +147,7 @@
 				714BDE4E2A3AEEB00061766A /* ViewController.swift in Sources */,
 				714BDE4A2A3AEEB00061766A /* AppDelegate.swift in Sources */,
 				714BDE602A3AFE140061766A /* ListViewController.swift in Sources */,
+				717370F42A446E8700285BA0 /* productStruct.swift in Sources */,
 				714BDE4C2A3AEEB00061766A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
