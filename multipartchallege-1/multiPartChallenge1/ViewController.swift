@@ -21,6 +21,7 @@ class ViewController: UIViewController {
             vc.productArr = viewCtrProductArr
         }
     }
+   
     var viewCtrProductArr : [Product] = []
     override func viewDidLoad() {
         super.viewDidLoad()
