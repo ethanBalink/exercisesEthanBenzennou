@@ -11,6 +11,7 @@ class TableViewController: UIViewController ,UITableViewDataSource ,UITableViewD
     
     
     let myViewModel = ViewModel()
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -43,9 +44,9 @@ class TableViewController: UIViewController ,UITableViewDataSource ,UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let currentObj = myViewModel.getPostForCell(indexPath.item)
-        //cell.textLabel?.text = "\(currentObj.title)"
-        cell.textLabel?.text = "\("currentObj.title")"
+        let currentCellVM = myViewModel.getCellViewModel(at: indexPath.item)
+        cell.textLabel?.text = "\(currentCellVM.getCellTitle())"// only title
+        //cell.textLabel?.text = "\("currentObj.title")"
         
         return cell
     }

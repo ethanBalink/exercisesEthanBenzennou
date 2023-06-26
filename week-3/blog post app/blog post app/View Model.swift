@@ -11,11 +11,14 @@ class ViewModel {
     var postsArr :[Post] = []
     func getPostsArrDataFromServices(_ completion: @escaping (_ success: Bool, _ errorMessage: String?) -> Void) {
         PostGetter.shared.getPostData
-        { success, error in
+        { success, data, error in
             if success {
-                self.postsArr = PostGetter.shared.getPosts()
-                print(self.postsArr)
-                completion(true,"succes")
+                if let postsArray = data {
+                    self.postsArr = postsArray
+                    print(self.postsArr)
+                    completion(true,"succes")
+                }
+               
                 // reloadData
                 
             } else if error != nil {
@@ -36,12 +39,11 @@ class ViewModel {
         return postsArr.count
         
     }
-    func getPostForCell(_ currentCell: Int)->Post {
-        return postsArr[currentCell]
-        
-        
+   func getCellViewModel(at i: Int) -> CellViewModel {
+       let cellVM = CellViewModel(post: postsArr[i])
+        return cellVM
     }
-    
+
     
 }
 
