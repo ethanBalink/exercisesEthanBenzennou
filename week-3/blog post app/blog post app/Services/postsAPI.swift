@@ -6,10 +6,10 @@
 //
 
 import Foundation
-class postGetter {
+class PostGetter {
     var postArr: [Post] = []
-    static var shared = postGetter()
-    func getData(_ completion: @escaping (_ success: Bool, _ errorMessage: String?) -> Void) {
+    static var shared = PostGetter()
+    func getPostData(_ completion: @escaping (_ success: Bool, _ errorMessage: String?) -> Void) {
         let url = URL(string: "https://jsonplaceholder.typicode.com/posts")!
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             if let error = error {

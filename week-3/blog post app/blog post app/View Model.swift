@@ -9,22 +9,22 @@ import Foundation
 
 class ViewModel {
     var postsArr :[Post] = []
-    func getPostsArrDataFromServices() {
-        postGetter.shared.getData
+    func getPostsArrDataFromServices(_ completion: @escaping (_ success: Bool, _ errorMessage: String?) -> Void) {
+        PostGetter.shared.getPostData
         { success, error in
             if success {
-                self.postsArr = postGetter.shared.getPosts()
+                self.postsArr = PostGetter.shared.getPosts()
                 print(self.postsArr)
+                completion(true,"succes")
                 // reloadData
-                //                    DispatchQueue.main.async {
-                //                        TabltableView.reloadData()
-                //                    }
+                
             } else if error != nil {
                 print(error ?? "")
-                
+                completion(false,"no data ")
             }
             else {
                 print("mistake")
+                completion(false,"internal error")
             }
         }
         
@@ -36,8 +36,8 @@ class ViewModel {
         return postsArr.count
         
     }
-    func getPostForCell(_ currentCell: Int) {
-        
+    func getPostForCell(_ currentCell: Int)->Post {
+        return postsArr[currentCell]
         
         
     }

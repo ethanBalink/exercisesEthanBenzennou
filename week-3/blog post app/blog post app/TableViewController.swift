@@ -19,11 +19,23 @@ class TableViewController: UIViewController ,UITableViewDataSource ,UITableViewD
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        // get data in view model
+        myViewModel.getPostsArrDataFromServices() { success, error in
+            if success {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+            else {
+            
+                print("mistake")
+            }
+        }
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3// myViewModel.getTableCount()
+        return myViewModel.getTableCount()
         
     }
     
@@ -31,7 +43,8 @@ class TableViewController: UIViewController ,UITableViewDataSource ,UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        //let currentObj = postsArr[indexPath.row]
+        let currentObj = myViewModel.getPostForCell(indexPath.item)
+        //cell.textLabel?.text = "\(currentObj.title)"
         cell.textLabel?.text = "\("currentObj.title")"
         
         return cell
