@@ -1,25 +1,22 @@
 //
-//  View Model.swift
+//  PostDetailVM.swift
 //  blogPostAppSwiftUI
 //
 //  Created by EthanBalink on 27/06/2023.
 //
 
 import Foundation
-
-class ViewModel: ObservableObject {
+class PostVM :ObservableObject{
+    @Published var commentsArr :[Comment] = []
     
-    @Published var postsArr :[Post] = []
-    
-    func getPostsArrDataFromServices() {
-        if postsArr.count == 0 {
-            PostGetter.shared.getPostData
-            { success, data, error in
+    func getCommentsFor(id:Int) {
+        if commentsArr.count == 0 {
+            CommentsGetter.shared.getCommentsFor(id: id){ success, data, error in
                 if success {
                     
-                    if let postsArray = data {
+                    if let commentsArray = data {
                         DispatchQueue.main.async {
-                            self.postsArr = postsArray
+                            self.commentsArr = commentsArray
                         }
                         print("got data and saved to array in viewModel")
                     }
@@ -32,12 +29,7 @@ class ViewModel: ObservableObject {
                     print("mistake")
                 }
             }
-            
-            
         }
     }
-   
     
 }
-
-

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct PostDetailView: View {
+    @StateObject var MyPostDetailVM = PostVM()
     var post :Post
     var body: some View {
         VStack{
@@ -15,8 +16,19 @@ struct PostDetailView: View {
                 .bold()
             Text("title: \(post.title)")
                 .bold()
+            List(MyPostDetailVM.commentsArr) { comment in
+                Text("comment body: \(comment.body)")
+                
+            }
         }
+        .onAppear {
+            MyPostDetailVM.getCommentsFor(id:post.id)
+            
+        }
+        
+        
     }
+    
 }
 
 struct PostDetailView_Previews: PreviewProvider {
