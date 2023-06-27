@@ -13,27 +13,29 @@ class ViewModel: ObservableObject {
     
     
     func getPostsArrDataFromServices() {
-        PostGetter.shared.getPostData
-        { success, data, error in
-            if success {
-                
-                if let postsArray = data {
-                    DispatchQueue.main.async {
-                        self.postsArr = postsArray
+        if postsArr.count == 0 {
+            PostGetter.shared.getPostData
+            { success, data, error in
+                if success {
+                    
+                    if let postsArray = data {
+                        DispatchQueue.main.async {
+                            self.postsArr = postsArray
+                        }
+                        print("got data and saved to array in viewModel")
                     }
-                    print(self.postsArr)
+                    
+                    
+                } else if error != nil {
+                    print(error ?? "")
                 }
-                
-                
-            } else if error != nil {
-                print(error ?? "")
+                else {
+                    print("mistake")
+                }
             }
-            else {
-                print("mistake")
-            }
+            
+            
         }
-        
-        
     }
     
 }
