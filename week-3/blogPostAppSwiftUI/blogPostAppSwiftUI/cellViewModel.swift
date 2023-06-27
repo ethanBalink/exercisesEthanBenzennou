@@ -7,7 +7,7 @@
 
 
 import Foundation
-class CellViewModel {
+class CellViewModel: ObservableObject {
     init(post:Post) {
         currentPost = post
     }

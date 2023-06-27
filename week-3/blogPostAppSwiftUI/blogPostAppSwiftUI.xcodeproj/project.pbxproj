@@ -14,7 +14,6 @@
 		71E30C702A4AE94200CC5703 /* View Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E30C6F2A4AE94200CC5703 /* View Model.swift */; };
 		71E30C732A4AE97600CC5703 /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E30C722A4AE97600CC5703 /* PostAPI.swift */; };
 		71E30C752A4AE9B800CC5703 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E30C742A4AE9B800CC5703 /* Model.swift */; };
-		71E30C772A4AE9F300CC5703 /* cellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E30C762A4AE9F300CC5703 /* cellViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +25,6 @@
 		71E30C6F2A4AE94200CC5703 /* View Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View Model.swift"; sourceTree = "<group>"; };
 		71E30C722A4AE97600CC5703 /* PostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPI.swift; sourceTree = "<group>"; };
 		71E30C742A4AE9B800CC5703 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		71E30C762A4AE9F300CC5703 /* cellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cellViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 				712661102A4AD3440020A64A /* Preview Content */,
 				71E30C6F2A4AE94200CC5703 /* View Model.swift */,
 				71E30C742A4AE9B800CC5703 /* Model.swift */,
-				71E30C762A4AE9F300CC5703 /* cellViewModel.swift */,
 			);
 			path = blogPostAppSwiftUI;
 			sourceTree = "<group>";
@@ -157,7 +154,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71E30C772A4AE9F300CC5703 /* cellViewModel.swift in Sources */,
 				71E30C752A4AE9B800CC5703 /* Model.swift in Sources */,
 				71E30C732A4AE97600CC5703 /* PostAPI.swift in Sources */,
 				71E30C702A4AE94200CC5703 /* View Model.swift in Sources */,
