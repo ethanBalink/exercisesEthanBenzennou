@@ -1,9 +1,10 @@
 //
 //  cellViewModel.swift
-//  blog post app
+//  blogPostAppSwiftUI
 //
-//  Created by EthanBalink on 26/06/2023.
+//  Created by EthanBalink on 27/06/2023.
 //
+
 
 import Foundation
 class CellViewModel {
