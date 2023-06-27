@@ -14,6 +14,7 @@
 		71E30C702A4AE94200CC5703 /* View Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E30C6F2A4AE94200CC5703 /* View Model.swift */; };
 		71E30C732A4AE97600CC5703 /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E30C722A4AE97600CC5703 /* PostAPI.swift */; };
 		71E30C752A4AE9B800CC5703 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E30C742A4AE9B800CC5703 /* Model.swift */; };
+		71E30C792A4B1AE000CC5703 /* PostDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E30C782A4B1AE000CC5703 /* PostDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		71E30C6F2A4AE94200CC5703 /* View Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View Model.swift"; sourceTree = "<group>"; };
 		71E30C722A4AE97600CC5703 /* PostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPI.swift; sourceTree = "<group>"; };
 		71E30C742A4AE9B800CC5703 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		71E30C782A4B1AE000CC5703 /* PostDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				71E30C712A4AE95A00CC5703 /* Services */,
 				7126610A2A4AD3420020A64A /* blogPostAppSwiftUIApp.swift */,
 				7126610C2A4AD3420020A64A /* ContentView.swift */,
+				71E30C782A4B1AE000CC5703 /* PostDetailView.swift */,
 				7126610E2A4AD3440020A64A /* Assets.xcassets */,
 				712661102A4AD3440020A64A /* Preview Content */,
 				71E30C6F2A4AE94200CC5703 /* View Model.swift */,
@@ -157,6 +160,7 @@
 				71E30C752A4AE9B800CC5703 /* Model.swift in Sources */,
 				71E30C732A4AE97600CC5703 /* PostAPI.swift in Sources */,
 				71E30C702A4AE94200CC5703 /* View Model.swift in Sources */,
+				71E30C792A4B1AE000CC5703 /* PostDetailView.swift in Sources */,
 				7126610D2A4AD3420020A64A /* ContentView.swift in Sources */,
 				7126610B2A4AD3420020A64A /* blogPostAppSwiftUIApp.swift in Sources */,
 			);

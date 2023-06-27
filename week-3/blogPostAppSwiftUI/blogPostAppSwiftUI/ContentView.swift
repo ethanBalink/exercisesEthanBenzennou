@@ -6,24 +6,31 @@
 //
 
 import SwiftUI
- 
+
 struct ContentView: View {
-
+    
     @StateObject var myViewModel = ViewModel()
-        var body: some View {
-        List(myViewModel.postsArr) { post in
-
-            VStack(spacing: 15) {
+    var body: some View {
+        NavigationView {
+            List(myViewModel.postsArr) { post in
                 
-                Text("\(post.title)")
+                NavigationLink(
+                    destination: PostDetailView(post: post),
+                    label: {
+                        VStack(spacing: 15) {
+                            
+                            Text("\(post.title)")
+                        }
+                        
+                    })
+                
+                // .frame(height: ) make list furhter from safeArea
             }
-            
-            .padding()
+            .onAppear {
+                myViewModel.getPostsArrDataFromServices()
+            }
+            .padding(.top,15)
         }
-        .onAppear {
-            myViewModel.getPostsArrDataFromServices()
-        }
-       // .frame(height: ) make list furhter from safeArea
     }
 }
 
