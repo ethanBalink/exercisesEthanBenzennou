@@ -8,23 +8,36 @@
 import SwiftUI
 
 struct PostDetailView: View {
-    @StateObject var MyPostDetailVM = PostVM()
+    
+    @StateObject var myPostDetailVM = PostVM()
+    
     var post :Post
+    
     var body: some View {
-        VStack{
+        VStack {
+            
+            Text(post.title)
+                .bold()
+                .font(.title)
+            Text("body: \(post.body)")
             Text("id:\(post.id)")
-                .bold()
-            Text("title: \(post.title)")
-                .bold()
-            List(MyPostDetailVM.commentsArr) { comment in
+                .font(.footnote)
+                .padding()
+            List(myPostDetailVM.commentsArr) { comment in
                 Text("comment body: \(comment.body)")
+                    .font(.body)
+                Text("commented by: \(comment.name)")
                 
-            }
+            }//.background(Color.blue)
+            .ignoresSafeArea()
+            .padding(.bottom, 10)
         }
         .onAppear {
-            MyPostDetailVM.getCommentsFor(id:post.id)
+            myPostDetailVM.getCommentsFor(id:post.id)
             
         }
+        .listStyle(.grouped)
+       
         
         
     }
@@ -33,7 +46,7 @@ struct PostDetailView: View {
 
 struct PostDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        let a = Post(id: 5, title: "jj", body: "jjoi")
+        let a = Post(id: 5, title: "hello people", body: "this is a new post")
         PostDetailView(post: a)
     }
 }

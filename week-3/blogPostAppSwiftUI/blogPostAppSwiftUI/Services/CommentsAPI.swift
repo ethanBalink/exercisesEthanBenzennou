@@ -7,7 +7,9 @@
 
 import Foundation
 class CommentsGetter {
+    
     static var shared = CommentsGetter()
+    
     func getCommentsFor(id:Int,_ completion: @escaping (_ success: Bool, _ data:[Comment]?,  _ errorMessage:String?) -> Void)  {
         let url = URL(string: "https://jsonplaceholder.typicode.com/comments?postId=\(id)")!
         URLSession.shared.dataTask(with: url) { (data, response, error) in

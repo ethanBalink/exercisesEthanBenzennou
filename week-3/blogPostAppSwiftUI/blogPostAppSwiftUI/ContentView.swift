@@ -30,7 +30,9 @@ struct ContentView: View {
                 myViewModel.getPostsArrDataFromServices()
             }
             .padding(.top,15)
+            .padding(.bottom,0)
             .navigationTitle("Posts")
+            .listStyle(.grouped)
         }
     }
 }
