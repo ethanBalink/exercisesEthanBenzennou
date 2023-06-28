@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		714BDE462A3AEEB00061766A /* multiPartChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiPartChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		714BDE462A3AEEB00061766A /* multiPartChallenge1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiPartChallenge1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714BDE492A3AEEB00061766A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		714BDE4B2A3AEEB00061766A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		714BDE4D2A3AEEB00061766A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		714BDE3D2A3AEEB00061766A = {
 			isa = PBXGroup;
 			children = (
-				714BDE482A3AEEB00061766A /* multiPartChallenge */,
+				714BDE482A3AEEB00061766A /* multiPartChallenge1 */,
 				714BDE472A3AEEB00061766A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -52,12 +52,12 @@
 		714BDE472A3AEEB00061766A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				714BDE462A3AEEB00061766A /* multiPartChallenge.app */,
+				714BDE462A3AEEB00061766A /* multiPartChallenge1.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		714BDE482A3AEEB00061766A /* multiPartChallenge */ = {
+		714BDE482A3AEEB00061766A /* multiPartChallenge1 */ = {
 			isa = PBXGroup;
 			children = (
 				714BDE492A3AEEB00061766A /* AppDelegate.swift */,
@@ -70,15 +70,15 @@
 				714BDE572A3AEEB20061766A /* Info.plist */,
 				714BDE5F2A3AFE140061766A /* ListViewController.swift */,
 			);
-			path = multiPartChallenge;
+			path = multiPartChallenge1;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		714BDE452A3AEEB00061766A /* multiPartChallenge */ = {
+		714BDE452A3AEEB00061766A /* multiPartChallenge1 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 714BDE5A2A3AEEB20061766A /* Build configuration list for PBXNativeTarget "multiPartChallenge" */;
+			buildConfigurationList = 714BDE5A2A3AEEB20061766A /* Build configuration list for PBXNativeTarget "multiPartChallenge1" */;
 			buildPhases = (
 				714BDE422A3AEEB00061766A /* Sources */,
 				714BDE432A3AEEB00061766A /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = multiPartChallenge;
+			name = multiPartChallenge1;
 			productName = multiPartChallenge1;
-			productReference = 714BDE462A3AEEB00061766A /* multiPartChallenge.app */;
+			productReference = 714BDE462A3AEEB00061766A /* multiPartChallenge1.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 714BDE412A3AEEB00061766A /* Build configuration list for PBXProject "multiPartChallenge" */;
+			buildConfigurationList = 714BDE412A3AEEB00061766A /* Build configuration list for PBXProject "multiPartChallenge1" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				714BDE452A3AEEB00061766A /* multiPartChallenge */,
+				714BDE452A3AEEB00061766A /* multiPartChallenge1 */,
 			);
 		};
 /* End PBXProject section */
@@ -345,7 +345,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		714BDE412A3AEEB00061766A /* Build configuration list for PBXProject "multiPartChallenge" */ = {
+		714BDE412A3AEEB00061766A /* Build configuration list for PBXProject "multiPartChallenge1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				714BDE582A3AEEB20061766A /* Debug */,
@@ -354,7 +354,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		714BDE5A2A3AEEB20061766A /* Build configuration list for PBXNativeTarget "multiPartChallenge" */ = {
+		714BDE5A2A3AEEB20061766A /* Build configuration list for PBXNativeTarget "multiPartChallenge1" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				714BDE5B2A3AEEB20061766A /* Debug */,
