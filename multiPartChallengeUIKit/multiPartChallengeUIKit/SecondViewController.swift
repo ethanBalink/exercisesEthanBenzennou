@@ -8,17 +8,7 @@
 import Foundation
 import UIKit
 
-class SecondViewContollerViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        4
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        
-        return cell
-    }
-    
+class SecondViewContollerViewController: UIViewController {
     
     var username:String = "Abraham"
 
@@ -27,9 +17,6 @@ class SecondViewContollerViewController: UIViewController , UITableViewDelegate,
         self.title = "Welcome " + username// needs to be found
         // Do any additional setup after loading the view.
     }
-    
-    @IBOutlet weak var table: UITableView!
-    
     
     /*
     // MARK: - Navigation

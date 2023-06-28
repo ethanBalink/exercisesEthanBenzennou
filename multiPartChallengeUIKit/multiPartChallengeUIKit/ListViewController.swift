@@ -5,10 +5,9 @@
 //  Created by EthanBalink on 28/06/2023.
 //
 
-import Foundation
 import UIKit
 
-class ListViewController: UIViewController ,UITableViewDataSource ,UITableViewDelegate {
+class ListViewController: UIViewController ,UITableViewDataSource ,UITableViewDelegate{
     var productArr : [Product] = []
     var categoriesArr :[String] = []
     func getCategories() {
@@ -40,7 +39,8 @@ class ListViewController: UIViewController ,UITableViewDataSource ,UITableViewDe
        tableView.reloadData()
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         getCategories()
-       tableView.dataSource = self
+        //tableView.reloadData()
+     //  tableView.dataSource = self
     }
    
     /*
