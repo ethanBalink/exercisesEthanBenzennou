@@ -1,8 +1,8 @@
 //
 //  productStruct.swift
-//  multiPartChallenge1
+//  multiPartChallengeUIKit
 //
-//  Created by EthanBalink on 22/06/2023.
+//  Created by EthanBalink on 28/06/2023.
 //
 
 import Foundation

@@ -1,13 +1,14 @@
 //
 //  ListViewController.swift
-//  multiPartChallenge1
+//  multiPartChallengeUIKit
 //
-//  Created by EthanBalink on 15/06/2023.
+//  Created by EthanBalink on 28/06/2023.
 //
 
+import Foundation
 import UIKit
 
-class ListViewController: UIViewController ,UITableViewDataSource ,UITableViewDelegate{
+class ListViewController: UIViewController ,UITableViewDataSource ,UITableViewDelegate {
     var productArr : [Product] = []
     var categoriesArr :[String] = []
     func getCategories() {

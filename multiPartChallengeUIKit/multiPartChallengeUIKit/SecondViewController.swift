@@ -1,13 +1,24 @@
 //
-//  ContollerViewController.swift
-//  multiPartChallenge1
+//  SecondViewController.swift
+//  multiPartChallengeUIKit
 //
-//  Created by EthanBalink on 15/06/2023.
+//  Created by EthanBalink on 28/06/2023.
 //
 
+import Foundation
 import UIKit
 
-class SecondViewContollerViewController: UIViewController {
+class SecondViewContollerViewController: UIViewController , UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        4
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell()
+        
+        return cell
+    }
+    
     
     var username:String = "Abraham"
 
@@ -17,7 +28,9 @@ class SecondViewContollerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBOutlet weak var table: UITableView!
+    
+    
     /*
     // MARK: - Navigation
 
