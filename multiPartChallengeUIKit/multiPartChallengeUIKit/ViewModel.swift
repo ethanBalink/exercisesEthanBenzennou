@@ -38,6 +38,9 @@ class ViewModel {
                     self.viewCtrProductArr = productArr
                     completion(true)
                 }
+                else {
+                    completion(false)
+                }
                 
                 
             }// completion
