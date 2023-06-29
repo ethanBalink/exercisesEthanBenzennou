@@ -81,24 +81,24 @@ class ViewController: UIViewController {
 //        }.resume()
 //    }
     
-    func fetchProductsFromAPI(completion: @escaping ([Product]) -> Void) {
-        let url = URL(string: "https://balink.onlink.dev/products")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            do {
-                if let data = data {
-                    let decoded = try JSONDecoder().decode([Product].self, from: data)
-                    completion(decoded) // Call the completion handler with the fetched products
-                }
-            } catch {
-                print("There was an error")
-            }
-        }.resume()
-    }
+//    func fetchProductsFromAPI(completion: @escaping ([Product]) -> Void) {
+//        let url = URL(string: "https://balink.onlink.dev/products")!
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "GET"
+//
+//        request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+//
+//        URLSession.shared.dataTask(with: request) { data, response, error in
+//            do {
+//                if let data = data {
+//                    let decoded = try JSONDecoder().decode([Product].self, from: data)
+//                    completion(decoded) // Call the completion handler with the fetched products
+//                }
+//            } catch {
+//                print("There was an error")
+//            }
+//        }.resume()
+//    }
     func loginButtonAction() {
         if inputFieldsValid(),
            let fname = firstnameInput?.text,
@@ -106,7 +106,12 @@ class ViewController: UIViewController {
            let username = usernameInput?.text,
            let pwd = passwordInput?.text {
             myVM.register(fname: fname, lname: lname, username: username, pwd: pwd){success in
-                if success{
+                if success {
+                    self.myVM.fetchProducts { success in
+                        if success {
+                            print(self.myVM.viewCtrProductArr!)
+                        }
+                    }
                     // second function to get array data
                 }
 //                self.fetchProductsFromAPI { products in
