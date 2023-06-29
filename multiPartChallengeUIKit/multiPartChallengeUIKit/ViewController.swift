@@ -5,12 +5,6 @@
 //  Created by EthanBalink on 28/06/2023.
 //
 
-//
-//  ViewController.swift
-//  multiPartChallenge1
-//
-//  Created by EthanBalink on 15/06/2023.
-//
 import UIKit
 
 class ViewController: UIViewController {
@@ -20,17 +14,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var usernameInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     var token: String = ""
-    
+    let myVM = ViewModel()
+  
     // to show username in text page navbar
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ListViewController {
-            vc.username = usernameInput?.text ?? ""
-            vc.productArr = viewCtrProductArr
-        }
+//        if let vc = segue.destination as? ListViewController {
+//            vc.username = usernameInput?.text ?? ""
+//            vc.productArr = viewCtrProductArr
+//        }
     }
-    var viewCtrProductArr : [Product] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    @IBAction func loginPressed() {
+        loginButtonAction()
     }
     //    func isValidEmail(_ email: String) -> Bool {
     //        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
@@ -56,32 +54,32 @@ class ViewController: UIViewController {
         }
         return false
     }
-    func register(fname: String, lname: String, username: String, pwd: String, completion: @escaping () -> Void) {
-        let url = URL(string: "https://balink.onlink.dev/register")!
-        let userCred: [String: Any] = [
-            "firstname": fname,
-               "lastname": lname,
-               "username": username,
-               "password": pwd
-        ]
-        
-        let convertedToJson = try? JSONSerialization.data(withJSONObject: userCred)
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.httpBody = convertedToJson
-        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.addValue("application/json", forHTTPHeaderField: "Accept")
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
-            if let data = data {
-                self.token = String(data: data, encoding: .utf8) ?? ""
-                completion() // Call the completion handler after obtaining the token
-            } else {
-                print("There was an error")
-            }
-        }.resume()
-    }
+//    func register(fname: String, lname: String, username: String, pwd: String, completion: @escaping () -> Void) {
+//        let url = URL(string: "https://balink.onlink.dev/register")!
+//        let userCred: [String: Any] = [
+//            "firstname": fname,
+//            "lastname": lname,
+//            "username": username,
+//            "password": pwd
+//        ]
+//
+//        let convertedToJson = try? JSONSerialization.data(withJSONObject: userCred)
+//
+//        var request = URLRequest(url: url)
+//        request.httpMethod = "POST"
+//        request.httpBody = convertedToJson
+//        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+//        request.addValue("application/json", forHTTPHeaderField: "Accept")
+//
+//        URLSession.shared.dataTask(with: request) { data, response, error in
+//            if let data = data {
+//                self.token = String(data: data, encoding: .utf8) ?? ""
+//                completion() // Call the completion handler after obtaining the token
+//            } else {
+//                print("There was an error")
+//            }
+//        }.resume()
+//    }
     
     func fetchProductsFromAPI(completion: @escaping ([Product]) -> Void) {
         let url = URL(string: "https://balink.onlink.dev/products")!
@@ -101,23 +99,23 @@ class ViewController: UIViewController {
             }
         }.resume()
     }
-    
-    @IBAction func loginPressed() {
+    func loginButtonAction() {
         if inputFieldsValid(),
            let fname = firstnameInput?.text,
            let lname = lastnameInput?.text,
            let username = usernameInput?.text,
            let pwd = passwordInput?.text {
-            register(fname: fname, lname: lname, username: username, pwd: pwd) {
-                self.fetchProductsFromAPI { products in
-                    self.viewCtrProductArr = products
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "listview", sender: nil)
-                    }
-                        
-                    
-                    //print(products)
+            myVM.register(fname: fname, lname: lname, username: username, pwd: pwd){success in
+                if success{
+                    // second function to get array data
                 }
+//                self.fetchProductsFromAPI { products in
+//                    self.viewCtrProductArr = products
+//                    DispatchQueue.main.async {
+//                        self.performSegue(withIdentifier: "listview", sender: nil)
+//                    }
+               // }
             }
         }
-    }}
+    }// func
+}// vc
