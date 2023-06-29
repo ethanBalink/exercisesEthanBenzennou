@@ -17,6 +17,7 @@
 		71D2CF572A4C385200E6DA71 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2CF562A4C385200E6DA71 /* ListViewController.swift */; };
 		71D2CF592A4C59C000E6DA71 /* productsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2CF582A4C59C000E6DA71 /* productsAPI.swift */; };
 		71D2CF5C2A4C5B0100E6DA71 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2CF5B2A4C5B0100E6DA71 /* ViewModel.swift */; };
+		71DE2F252A4D85A10000F374 /* inputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71DE2F242A4D85A10000F374 /* inputValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		71D2CF562A4C385200E6DA71 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		71D2CF582A4C59C000E6DA71 /* productsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = productsAPI.swift; sourceTree = "<group>"; };
 		71D2CF5B2A4C5B0100E6DA71 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		71DE2F242A4D85A10000F374 /* inputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inputValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		71D2CF3D2A4C372100E6DA71 /* multiPartChallengeUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				71DE2F232A4D85890000F374 /* Utils */,
 				71D2CF5A2A4C59C500E6DA71 /* Services */,
 				71D2CF542A4C382400E6DA71 /* productStruct.swift */,
 				71D2CF5B2A4C5B0100E6DA71 /* ViewModel.swift */,
@@ -85,6 +88,14 @@
 				71D2CF582A4C59C000E6DA71 /* productsAPI.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		71DE2F232A4D85890000F374 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				71DE2F242A4D85A10000F374 /* inputValidation.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +172,7 @@
 				71D2CF432A4C372100E6DA71 /* ViewController.swift in Sources */,
 				71D2CF572A4C385200E6DA71 /* ListViewController.swift in Sources */,
 				71D2CF3F2A4C372100E6DA71 /* AppDelegate.swift in Sources */,
+				71DE2F252A4D85A10000F374 /* inputValidation.swift in Sources */,
 				71D2CF552A4C382400E6DA71 /* productStruct.swift in Sources */,
 				71D2CF592A4C59C000E6DA71 /* productsAPI.swift in Sources */,
 				71D2CF412A4C372100E6DA71 /* SceneDelegate.swift in Sources */,

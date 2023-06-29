@@ -35,7 +35,7 @@ class ViewModel {
         if let existingToken = self.token {
             ProductsGetter.shared.fetchProductsFromAPI(token: existingToken, completion: { productArr in
                 if let recievedProducts = productArr {
-                    self.viewCtrProductArr = productArr
+                    self.viewCtrProductArr = recievedProducts
                     completion(true)
                 }
                 else {
@@ -48,7 +48,30 @@ class ViewModel {
         }// if token exists
     }// func
     
-   
+    func loginButtonAction(fname: String, lname: String, username: String, pwd: String,_ completion: @escaping (_ success: Bool) -> Void) {
+        
+        if (InputValidation.inputIsValid(fname, ofType: "name") && InputValidation.inputIsValid(lname, ofType: "name") && InputValidation.inputIsValid(username, ofType: "email") && InputValidation.inputIsValid(pwd, ofType: "password")) {
+            register(fname: fname, lname: lname, username: username, pwd: pwd) { success in
+                if success {
+                    self.fetchProducts { success in
+                        if success {
+                            completion(true)
+                        }// if success fetchProducts
+                        else {
+                            completion(false)
+                        }
+                    } // closure fetchProducts
+                }// if success register
+                
+            }// closure register
+            
+        }// if validation
+        else {
+            print("invalid unput")
+        }
+    }// func
+    
+    
     
     
 }// class

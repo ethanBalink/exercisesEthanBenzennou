@@ -27,39 +27,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginPressed() {
-        loginButtonAction()
+        myVM.loginButtonAction(fname: firstnameInput.text!, lname: lastnameInput.text!, username: usernameInput.text!, pwd: passwordInput.text!) { success in
+            if success {
+                DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "listview", sender: nil)
+                }
+            }
+            else {
+                print("unable to complete registation for some reason")
+            }
+        }
     }
     
-    func inputFieldsValid() -> Bool {
-        guard let username = usernameInput?.text, let password = passwordInput?.text, let _ = firstnameInput?.text, let _ = lastnameInput?.text
-        else {
-            return false
-        }
-        
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        let passwordRegEx = "^[^\\s]+$"
-        
-        let emailPred = NSPredicate(format: "SELF MATCHES %@", emailRegEx)
-        let passwordPred = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
-        
-        return !username.isEmpty && !password.isEmpty && emailPred.evaluate(with: username) && passwordPred.evaluate(with: password)
-    }
+    
     //
-    func loginButtonAction() {
-        if inputFieldsValid() {
-            let fName = firstnameInput.text!, lName = lastnameInput.text!, username = usernameInput.text!, pwd = passwordInput.text!
-            myVM.register(fname: fName, lname: lName, username: username, pwd: pwd){ success in
-                if success {
-                    self.myVM.fetchProducts { success in
-                        if success {
-                            print(self.myVM.viewCtrProductArr!)
-                            DispatchQueue.main.async {
-                                self.performSegue(withIdentifier: "listview", sender: nil)
-                            }
-                        }// if success fetchProducts
-                    } // closure fetchProducts
-                }// if success register
-            }// closure register
-        }// input validation's if
-    }// func
+   
 }// vc
+
