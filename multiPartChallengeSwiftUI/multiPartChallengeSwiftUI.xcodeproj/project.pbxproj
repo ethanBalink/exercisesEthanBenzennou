@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71ABEFCE2A5184D6009C3703 /* TokenStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ABEFCD2A5184D6009C3703 /* TokenStruct.swift */; };
 		71D0B31D2A4C2E420095E580 /* MainRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0B31C2A4C2E420095E580 /* MainRenderer.swift */; };
 		71D0B31F2A4C2E420095E580 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0B31E2A4C2E420095E580 /* ContentView.swift */; };
 		71D0B3212A4C2E430095E580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D0B3202A4C2E430095E580 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71ABEFCD2A5184D6009C3703 /* TokenStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStruct.swift; sourceTree = "<group>"; };
 		71D0B3192A4C2E420095E580 /* multiPartChallengeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiPartChallengeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D0B31C2A4C2E420095E580 /* MainRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRenderer.swift; sourceTree = "<group>"; };
 		71D0B31E2A4C2E420095E580 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,6 +49,7 @@
 		71D0B3102A4C2E420095E580 = {
 			isa = PBXGroup;
 			children = (
+				71ABEFCD2A5184D6009C3703 /* TokenStruct.swift */,
 				71D0B31B2A4C2E420095E580 /* multiPartChallengeSwiftUI */,
 				71D0B31A2A4C2E420095E580 /* Products */,
 			);
@@ -174,6 +177,7 @@
 				71DE2F372A4DA41B0000F374 /* CategriesView.swift in Sources */,
 				71D0B31F2A4C2E420095E580 /* ContentView.swift in Sources */,
 				71DE2F352A4D8F430000F374 /* ProductModel.swift in Sources */,
+				71ABEFCE2A5184D6009C3703 /* TokenStruct.swift in Sources */,
 				71D2CF5E2A4C72B900E6DA71 /* SignupAPI.swift in Sources */,
 				71DE2F2C2A4D8B150000F374 /* GeneralVM.swift in Sources */,
 				71D0B31D2A4C2E420095E580 /* MainRenderer.swift in Sources */,

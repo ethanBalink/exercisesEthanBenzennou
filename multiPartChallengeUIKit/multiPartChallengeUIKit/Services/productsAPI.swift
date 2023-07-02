@@ -61,7 +61,7 @@ class ProductsGetter {
                     completion(nil)
                 }
             }.resume()
-        }
+        }// if url
         
     }// func
 }// class

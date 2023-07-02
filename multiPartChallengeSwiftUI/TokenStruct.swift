@@ -1,6 +1,6 @@
 //
 //  TokenStruct.swift
-//  multiPartChallengeUIKit
+//  multiPartChallengeSwiftUI
 //
 //  Created by EthanBalink on 02/07/2023.
 //
