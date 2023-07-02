@@ -25,9 +25,11 @@ class ViewController: UIViewController {
             vc.productArr = myVM.viewCtrProductArr ?? []
         }
     }
-    
+    // TODO: fix force unwrap
     @IBAction func loginPressed() {
-        myVM.loginButtonAction(fname: firstnameInput.text!, lname: lastnameInput.text!, username: usernameInput.text!, pwd: passwordInput.text!) { success in
+        if let unwrappedFname =  firstnameInput.text, let unwrappedLname = lastnameInput.text, let unwrappedUsername = usernameInput.text, let unwrappedPassword = passwordInput.text {
+            
+        myVM.loginButtonAction(fname: unwrappedFname, lname: unwrappedLname, username: unwrappedUsername, pwd: unwrappedPassword) { success in
             if success {
                 DispatchQueue.main.async {
                     self.performSegue(withIdentifier: "listview", sender: nil)
@@ -37,6 +39,7 @@ class ViewController: UIViewController {
                 print("unable to complete registation for some reason")
             }
         }
+    }
     }
     
     

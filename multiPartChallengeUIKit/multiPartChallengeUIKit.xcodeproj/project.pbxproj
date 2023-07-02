@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71ABEFCC2A517C5A009C3703 /* TokenStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ABEFCB2A517C5A009C3703 /* TokenStruct.swift */; };
 		71D2CF3F2A4C372100E6DA71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2CF3E2A4C372100E6DA71 /* AppDelegate.swift */; };
 		71D2CF412A4C372100E6DA71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2CF402A4C372100E6DA71 /* SceneDelegate.swift */; };
 		71D2CF432A4C372100E6DA71 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2CF422A4C372100E6DA71 /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		71ABEFCB2A517C5A009C3703 /* TokenStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStruct.swift; sourceTree = "<group>"; };
 		71D2CF3B2A4C372100E6DA71 /* multiPartChallengeUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiPartChallengeUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D2CF3E2A4C372100E6DA71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71D2CF402A4C372100E6DA71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				71D2CF492A4C372200E6DA71 /* LaunchScreen.storyboard */,
 				71D2CF4C2A4C372200E6DA71 /* Info.plist */,
 				71D2CF562A4C385200E6DA71 /* ListViewController.swift */,
+				71ABEFCB2A517C5A009C3703 /* TokenStruct.swift */,
 			);
 			path = multiPartChallengeUIKit;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				71D2CF432A4C372100E6DA71 /* ViewController.swift in Sources */,
 				71D2CF572A4C385200E6DA71 /* ListViewController.swift in Sources */,
 				71D2CF3F2A4C372100E6DA71 /* AppDelegate.swift in Sources */,
+				71ABEFCC2A517C5A009C3703 /* TokenStruct.swift in Sources */,
 				71DE2F252A4D85A10000F374 /* inputValidation.swift in Sources */,
 				71D2CF552A4C382400E6DA71 /* productStruct.swift in Sources */,
 				71D2CF592A4C59C000E6DA71 /* productsAPI.swift in Sources */,

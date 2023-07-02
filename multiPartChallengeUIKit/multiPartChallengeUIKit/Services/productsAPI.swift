@@ -11,9 +11,9 @@ class ProductsGetter {
     
     func registerAPI(fname: String, lname: String, username: String, pwd: String, completion: @escaping (_ success: Bool, _ data:String?,  _ error:Error?) -> Void) {
         
-        if let url = URL(string: "https://balink.onlink.dev/register") {
+        if let url = URL(string: "https://balink.onlink.dev/users/register") {
             
-            let userCred: [String: Any] = [
+            let userCred = [
                 "firstname": fname,
                 "lastname": lname,
                 "username": username,
@@ -30,7 +30,8 @@ class ProductsGetter {
             
             URLSession.shared.dataTask(with: request) { data, response, error in
                 if let recievedToken = data {
-                    if let convertedToken = String(data: recievedToken, encoding: .utf8) {
+                    let tokenStruct = try? JSONDecoder().decode(Token.self, from: recievedToken)
+                    if let convertedToken = tokenStruct?.token {
                         completion(true, convertedToken, nil)
                     }
                     
