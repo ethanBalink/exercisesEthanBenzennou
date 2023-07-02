@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		71ABEFD02A5194FD009C3703 /* TokenStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ABEFCF2A5194FD009C3703 /* TokenStruct.swift */; };
+		71ABEFD02A5194FD009C3703 /* RegisterTokenStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ABEFCF2A5194FD009C3703 /* RegisterTokenStruct.swift */; };
 		71ABEFD22A519527009C3703 /* CategoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ABEFD12A519527009C3703 /* CategoryDetailView.swift */; };
 		71ABEFD42A51959D009C3703 /* CategoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ABEFD32A51959D009C3703 /* CategoryDetailViewModel.swift */; };
+		71ABEFD62A51BD37009C3703 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ABEFD52A51BD37009C3703 /* LoginView.swift */; };
+		71ABEFD82A51C144009C3703 /* LoginAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ABEFD72A51C144009C3703 /* LoginAPI.swift */; };
+		71ABEFDA2A51C306009C3703 /* LoginToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71ABEFD92A51C306009C3703 /* LoginToken.swift */; };
 		71D0B31D2A4C2E420095E580 /* MainRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0B31C2A4C2E420095E580 /* MainRenderer.swift */; };
-		71D0B31F2A4C2E420095E580 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0B31E2A4C2E420095E580 /* ContentView.swift */; };
+		71D0B31F2A4C2E420095E580 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D0B31E2A4C2E420095E580 /* SignupView.swift */; };
 		71D0B3212A4C2E430095E580 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D0B3202A4C2E430095E580 /* Assets.xcassets */; };
 		71D0B3242A4C2E430095E580 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71D0B3232A4C2E430095E580 /* Preview Assets.xcassets */; };
 		71D2CF5E2A4C72B900E6DA71 /* SignupAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D2CF5D2A4C72B900E6DA71 /* SignupAPI.swift */; };
@@ -23,12 +26,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		71ABEFCF2A5194FD009C3703 /* TokenStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenStruct.swift; sourceTree = "<group>"; };
+		71ABEFCF2A5194FD009C3703 /* RegisterTokenStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterTokenStruct.swift; sourceTree = "<group>"; };
 		71ABEFD12A519527009C3703 /* CategoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailView.swift; sourceTree = "<group>"; };
 		71ABEFD32A51959D009C3703 /* CategoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewModel.swift; sourceTree = "<group>"; };
+		71ABEFD52A51BD37009C3703 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		71ABEFD72A51C144009C3703 /* LoginAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAPI.swift; sourceTree = "<group>"; };
+		71ABEFD92A51C306009C3703 /* LoginToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginToken.swift; sourceTree = "<group>"; };
 		71D0B3192A4C2E420095E580 /* multiPartChallengeSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiPartChallengeSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D0B31C2A4C2E420095E580 /* MainRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRenderer.swift; sourceTree = "<group>"; };
-		71D0B31E2A4C2E420095E580 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		71D0B31E2A4C2E420095E580 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
 		71D0B3202A4C2E430095E580 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		71D0B3232A4C2E430095E580 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		71D2CF5D2A4C72B900E6DA71 /* SignupAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupAPI.swift; sourceTree = "<group>"; };
@@ -75,8 +81,10 @@
 				71DE2F2B2A4D8B150000F374 /* GeneralVM.swift */,
 				71ABEFD12A519527009C3703 /* CategoryDetailView.swift */,
 				71ABEFD32A51959D009C3703 /* CategoryDetailViewModel.swift */,
-				71ABEFCF2A5194FD009C3703 /* TokenStruct.swift */,
-				71D0B31E2A4C2E420095E580 /* ContentView.swift */,
+				71ABEFD52A51BD37009C3703 /* LoginView.swift */,
+				71ABEFCF2A5194FD009C3703 /* RegisterTokenStruct.swift */,
+				71ABEFD92A51C306009C3703 /* LoginToken.swift */,
+				71D0B31E2A4C2E420095E580 /* SignupView.swift */,
 				71D0B3202A4C2E430095E580 /* Assets.xcassets */,
 				71D0B3222A4C2E430095E580 /* Preview Content */,
 				71DE2F342A4D8F430000F374 /* ProductModel.swift */,
@@ -106,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				71D2CF5D2A4C72B900E6DA71 /* SignupAPI.swift */,
+				71ABEFD72A51C144009C3703 /* LoginAPI.swift */,
 			);
 			path = Sevices;
 			sourceTree = "<group>";
@@ -181,15 +190,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				71DE2F372A4DA41B0000F374 /* CategriesView.swift in Sources */,
-				71D0B31F2A4C2E420095E580 /* ContentView.swift in Sources */,
+				71D0B31F2A4C2E420095E580 /* SignupView.swift in Sources */,
 				71DE2F352A4D8F430000F374 /* ProductModel.swift in Sources */,
+				71ABEFDA2A51C306009C3703 /* LoginToken.swift in Sources */,
 				71ABEFD42A51959D009C3703 /* CategoryDetailViewModel.swift in Sources */,
 				71D2CF5E2A4C72B900E6DA71 /* SignupAPI.swift in Sources */,
 				71ABEFD22A519527009C3703 /* CategoryDetailView.swift in Sources */,
+				71ABEFD82A51C144009C3703 /* LoginAPI.swift in Sources */,
+				71ABEFD62A51BD37009C3703 /* LoginView.swift in Sources */,
 				71DE2F2C2A4D8B150000F374 /* GeneralVM.swift in Sources */,
 				71D0B31D2A4C2E420095E580 /* MainRenderer.swift in Sources */,
 				71DE2F392A4DB5360000F374 /* CategoriesVM.swift in Sources */,
-				71ABEFD02A5194FD009C3703 /* TokenStruct.swift in Sources */,
+				71ABEFD02A5194FD009C3703 /* RegisterTokenStruct.swift in Sources */,
 				71DE2F272A4D8A780000F374 /* inputValidation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
