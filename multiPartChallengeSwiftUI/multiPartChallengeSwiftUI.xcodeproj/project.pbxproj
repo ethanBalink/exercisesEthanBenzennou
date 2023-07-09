@@ -139,6 +139,15 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		71BF36162A5AF1D50064EB25 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				71D0B31C2A4C2E420095E580 /* MainRenderer.swift */,
+				71BB31C82A52F27800C12888 /* FavoriteDB.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		71D0B3102A4C2E420095E580 = {
 			isa = PBXGroup;
 			children = (
@@ -167,9 +176,8 @@
 				71ABF58C2A53FA21006DF839 /* CategoryProducts */,
 				71B884452A570B9200E451BE /* SingleProduct */,
 				71ABF5912A546FFC006DF839 /* Search */,
-				71D0B31C2A4C2E420095E580 /* MainRenderer.swift */,
+				71BF36162A5AF1D50064EB25 /* Misc */,
 				71DE2F2B2A4D8B150000F374 /* AllProducts.swift */,
-				71BB31C82A52F27800C12888 /* FavoriteDB.swift */,
 				71D0B3202A4C2E430095E580 /* Assets.xcassets */,
 				71D0B3222A4C2E430095E580 /* Preview Content */,
 			);
